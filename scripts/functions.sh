@@ -19,7 +19,6 @@ git_branch() {
 		if [[ $? -eq 0 ]]
 		then
 				local git_branch=$(git branch | grep '*' | awk '{print $2}')
-				printf "\uf1d3"       # f1d3:   
 				echo -n $git_branch
 		fi
 }

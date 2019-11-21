@@ -34,14 +34,15 @@ USER_NAME="\[${BOLD}\]\[${CYAN}\]\u\[$RESET\]"
 
 ### Requires git_branch function to be sourced in the shell prior to sourcing this file
 ### WARNING: Load the Theme File at the very end of your bashrc
-GIT_BRANCH="\[${BOLD}${IND_RED}\] ${HAND_RIGHT} \[${BOLD}${GREY}\] \$(git_branch)\[$RESET\]"
+GIT_LOGO=$(printf '\uf1d3')
+GIT_BRANCH="\[${BOLD}${IND_RED}\] ${GIT_LOGO} \[${BOLD}${GREY}\] \$(git_branch)\[$RESET\]"
 
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 #       PROMPT 
 #+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-
 PS1=" $DIR_PATH"
 PS1+=" $PROMPT_TIME"
-# PS1+=" $GIT_BRANCH "
+PS1+=" $GIT_BRANCH "
 PS1+="\n"
 PS1+="$FLAME"
 PS1+=" $USER_NAME"
